@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class ChristmasLights {
 
-    public SwitchLightsOn switchLightsOn;
-    public SwitchLightsOff switchLightsOff;
+    public LightsOn switchLightsOn;
+    public LightsOff switchLightsOff;
     public ToggleLights toggleLights;
     public void christmasLights() {
         Scanner scanner = new Scanner(System.in);
-        switchLightsOn = new SwitchLightsOn();
-        String[][] lights = new String[1000][1000];
+        switchLightsOn = new LightsOn();
+        int[][] lights = new int[1000][1000];
         int[] xCoordinates = new int[2];
         int[] yCoordinates = new int[2];
         String instruction = "";
         String onOff = "";
         for(int i=0;i<1000; i++) {
             for(int j=0;j<1000;j++) {
-                lights[i][j] = "off";
+                lights[i][j] = 0;
             }
         }
         for(int ins=0; ins < 9; ins++) {
